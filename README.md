@@ -4,12 +4,12 @@ Updates to openff-2.0.0 which include improved chemical perception for sulfonami
 
 Changes can be broadly classified as: 
  - Chemical typing related
- - sulfonamides 
- - phosphates 
- - bridgehead nitrogens 
- - bridgehead carbons 
- - groups with delocalized charges
-     - Fitting procedure related
+   - sulfonamides 
+   - phosphates 
+   - bridgehead nitrogens 
+   - bridgehead carbons 
+   - groups with delocalized charges
+ - Fitting procedure related
      - use of physically intuitive bonds and angles from modified-seminario as a starting point
      - data-driven values for improper torsions
      - including dihedral deviations from optimized geometries to better resolve torsion parameters
@@ -54,13 +54,13 @@ Parameters with modifications:
  |     Bond smarts     |      Sage 2.0.0     |      Sage 2.1.0     |
 |:-------------------:|:-------------------:|:-------------------:|
 |     (b34 - b40)     | k (kcal/mol/ang**2) | k (kcal/mol/ang**2) |
-|   "[#7:1]-[#7:2]"   |         845         |         578         |
-| "[#7X3:1]-[#7X2:2]" |         830         |         620         |
-| "[#7X2:1]-[#7X2:2]" |         675         |         473         |
-|   "[#7:1]:[#7:2]"   |         732         |         662         |
-|   "[#7:1]=[#7:2]"   |         698         |         1089        |
-| "[#7+1:1]=[#7-1:2]" |         766         |         2440        |
-|   "[#7:1]#[#7:2]"   |         760         |         3237        |
+|   `"[#7:1]-[#7:2]"`   |         845         |         578         |
+| `"[#7X3:1]-[#7X2:2]"` |         830         |         620         |
+| `"[#7X2:1]-[#7X2:2]"` |         675         |         473         |
+|   `"[#7:1]:[#7:2]"`   |         732         |         662         |
+|   `"[#7:1]=[#7:2]"`   |         698         |         1089        |
+| `"[#7+1:1]=[#7-1:2]"` |         766         |         2440        |
+|   `"[#7:1]#[#7:2]"`   |         760         |         3237        |
 
  - Included lot of new parameters for chemistries that involve delocalized charges from @chapincavender's work which would assign the same parameters for atom substructures that are in a delocalized configuration (https://github.com/chapincavender/protein-param-fit/blob/attenuation/test-delocalized-charge-assignments.py). Functional groups targeted were:
      - Amidinium (added t18b)
@@ -112,3 +112,15 @@ Parameters with modifications:
       
       <img src="https://user-images.githubusercontent.com/16142894/231010478-3d339032-875d-4946-9f8b-f7af1d847025.png" width=200>
 
+ - Improper torsions were also adjusted in this version, and the changes in k values were
+ 
+ | Improper torsions                                               | Sage 2.0.0    | Sage 2.1.0    |
+|-----------------------------------------------------------------|---------------|---------------|
+|                                                                 | k in kcal/mol | k in kcal/mol |
+| i1: `"[*:1]~[#6X3:2](~[*:3])~[*:4]"`                            | 1.10          | 5.23          |
+| i2: `"[*:1]~[#6X3:2](~[#8X1:3])~[#8:4]"`                        | 10.50         | 12.92         |
+| i3: `"[*:1]~[#7X3$(*~[#15,#16](!-[*])):2](~[*:3])~[*:4]"`       | 1.10          | 13.70         |
+| i4: `"[*:1]~[#7X3$(*~[#6X3]):2](~[*:3])~[*:4]"`                 | 1.00          | 1.26          |
+| i5: `"[*:1]~[#7X3$(*~[#7X2]):2](~[*:3])~[*:4]"`                 | 1.10          | -2.34         |
+| i6:` "[*:1]~[#7X3$(*@1-[*]=,:[*][*]=,:[*]@1):2](~[*:3])~[*:4]"` | 10.50         | 16.01         |
+| i7:` "[*:1]~[#6X3:2](=[#7X2,#7X3+1:3])~[#7:4]"`                 | 10.50         | 10.12         |
