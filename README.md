@@ -51,11 +51,12 @@ Parameters with modifications:
 Details of changes (still updating this section...):
  - A better starting point for the angles and bonds from the modified Seminario Method (https://doi.org/10.1021/acs.jctc.7b00785) as implemented in QUBEKit (https://github.com/qubekit/QUBEKit) (https://pubs.acs.org/doi/10.1021/acs.jcim.8b00767). Initial work by @jthorton and supporting analysis here, https://github.com/jthorton/MSM_QCArchive. This is helpful in avoiding manual corrections to parameters and brings the force constants of bonds and angles in physically intuitive domain. Since this is multi-dimensional optimization we get solutions on the pareto-optimal surface which resulted in some double bonds having lower force constants than single bonds. Modified seminario uses Hessian data to evaluate the force constants and the mean of the force constants (and lengths) for the parameters was taken as the starting point for forcebalance optimization.
  - Included lot of new parameters for chemistries that involve delocalized charges from @chapincavender's work which would assign the same parameters for atoms that are in a delocalized configuration (https://github.com/chapincavender/protein-param-fit/blob/attenuation/test-delocalized-charge-assignments.py). Functional groups targeted were:
-     - Amidinium
-     - Carboxylate
-     - Nitro
-     - Phosphate
-     - Sulfate
+     - Amidinium (added t18b)
+     - Guanidinium (b13a, t87a)
+     - Carboxylate (t18a, t19a, t31a, t42a, t48a)
+     - Nitro (t82a, t83a)
+     - Phosphate (no change needed)
+     - Sulfate (no change needed)
  - Improved typing for sulfonamides and phosphates from @pavankum and @trevorgokey with changes in angle parameters and additional periodicities for certain torsion parameters.
  - Introduced new parameters for bridgehead nitrogens and bridgehead carbons where pyramidal geometry is seen in QM.
  - 
