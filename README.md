@@ -2,18 +2,18 @@
 
 Updates to openff-2.0.0 which include improved chemical perception for sulfonamides and phosphates, extended training set coverage which now contains training data from Gen2 as well as Gen1 datasets, and improved fitting procedures with the use of a physically intuitive starting point from modified seminario and including dihedral deviations in optimized geometry targets, and optimizing impropers as well. Contributions for this release include changes from @pavankum, @trevorgokey, @chapincavender, @jthorton and valuable feedback from team @openforcefield. 
 
-Changes can be broadly classified as: \
-&nbsp;&nbsp;&nbsp;&nbsp;- Chemical typing related\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- sulfonamides \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- phosphates \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- bridgehead nitrogens \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- bridgehead carbons \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- groups with delocalized charges\
-&nbsp;&nbsp;&nbsp;&nbsp;	- Fitting procedure related\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		- use of physically intuitive bonds and angles from modified-seminario as a starting point\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		- data-driven values for improper torsions\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		- including dihedral deviations from optimized geometries to better resolve torsion parameters\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		- broader coverage of parameters with extended training targets\
+Changes can be broadly classified as: 
+ - Chemical typing related
+ - sulfonamides 
+ - phosphates 
+ - bridgehead nitrogens 
+ - bridgehead carbons 
+ - groups with delocalized charges
+     - Fitting procedure related
+     - use of physically intuitive bonds and angles from modified-seminario as a starting point
+     - data-driven values for improper torsions
+     - including dihedral deviations from optimized geometries to better resolve torsion parameters
+     - broader coverage of parameters with extended training targets
 
 Parameters with modifications:
 ```
@@ -48,14 +48,14 @@ Parameters with modifications:
         <!-- modification: PB additional periodicities for t143 and t157 based on QM profiles for sulfonamides -->
 ```
 
-Details of changes (still updating this section...):\
- - A better starting point for the angles and bonds from the modified Seminario Method (https://doi.org/10.1021/acs.jctc.7b00785) as implemented in QUBEKit (https://github.com/qubekit/QUBEKit) (https://pubs.acs.org/doi/10.1021/acs.jcim.8b00767). Initial work by @jthorton and supporting analysis here, https://github.com/jthorton/MSM_QCArchive. This is helpful in avoiding manual corrections to parameters and brings the force constants of bonds and angles in physically intuitive domain. Since this is multi-dimensional optimization we get solutions on the pareto-optimal surface which resulted in some double bonds having lower force constants than single bonds. Modified seminario uses Hessian data to evaluate the force constants and the mean of the force constants (and lengths) for the parameters was taken as the starting point for forcebalance optimization.\
- - Included lot of new parameters for chemistries that involve delocalized charges from @chapincavender's work which would assign the same parameters for atoms that are in a delocalized configuration (https://github.com/chapincavender/protein-param-fit/blob/attenuation/test-delocalized-charge-assignments.py). Functional groups targeted were:\
-     - Amidinium\
-     - Carboxylate\
-     - Nitro\
-     - Phosphate\
-     - Sulfate\
- - Improved typing for sulfonamides and phosphates from @pavankum and @trevorgokey with changes in angle parameters and additional periodicities for certain torsion parameters.\
- - Introduced new parameters for bridgehead nitrogens and bridgehead carbons where pyramidal geometry is seen in QM.\
+Details of changes (still updating this section...):
+ - A better starting point for the angles and bonds from the modified Seminario Method (https://doi.org/10.1021/acs.jctc.7b00785) as implemented in QUBEKit (https://github.com/qubekit/QUBEKit) (https://pubs.acs.org/doi/10.1021/acs.jcim.8b00767). Initial work by @jthorton and supporting analysis here, https://github.com/jthorton/MSM_QCArchive. This is helpful in avoiding manual corrections to parameters and brings the force constants of bonds and angles in physically intuitive domain. Since this is multi-dimensional optimization we get solutions on the pareto-optimal surface which resulted in some double bonds having lower force constants than single bonds. Modified seminario uses Hessian data to evaluate the force constants and the mean of the force constants (and lengths) for the parameters was taken as the starting point for forcebalance optimization.
+ - Included lot of new parameters for chemistries that involve delocalized charges from @chapincavender's work which would assign the same parameters for atoms that are in a delocalized configuration (https://github.com/chapincavender/protein-param-fit/blob/attenuation/test-delocalized-charge-assignments.py). Functional groups targeted were:
+     - Amidinium
+     - Carboxylate
+     - Nitro
+     - Phosphate
+     - Sulfate
+ - Improved typing for sulfonamides and phosphates from @pavankum and @trevorgokey with changes in angle parameters and additional periodicities for certain torsion parameters.
+ - Introduced new parameters for bridgehead nitrogens and bridgehead carbons where pyramidal geometry is seen in QM.
  - 
