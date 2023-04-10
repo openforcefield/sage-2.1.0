@@ -1,20 +1,20 @@
 # Sage-2.1.0
 
 Updates to openff-2.0.0 which include improved chemical perception for sulfonamides and phosphates, extended training set coverage which now contains training data from Gen2 as well as Gen1 datasets, and improved fitting procedures with the use of a physically intuitive starting point from modified seminario and including dihedral deviations in optimized geometry targets, and optimizing impropers as well. Contributions for this release include changes from @pavankum, @trevorgokey, @chapincavender, @jthorton and valuable feedback from team @openforcefield. 
-<pre>
+
 Changes can be broadly classified as: \
-	- Chemical typing related\
-		- sulfonamides \
-		- phosphates \
-		- bridgehead nitrogens \
-		- bridgehead carbons \
-		- groups with delocalized charges\
-	- Fitting procedure related\
-		- use of physically intuitive bonds and angles from modified-seminario as a starting point\
-		- data-driven values for improper torsions\
-		- including dihedral deviations from optimized geometries to better resolve torsion parameters\
-		- broader coverage of parameters with extended training targets\
-</pre>
+&nbsp;&nbsp;&nbsp;&nbsp;- Chemical typing related\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- sulfonamides \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- phosphates \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- bridgehead nitrogens \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- bridgehead carbons \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- groups with delocalized charges\
+&nbsp;&nbsp;&nbsp;&nbsp;	- Fitting procedure related\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		- use of physically intuitive bonds and angles from modified-seminario as a starting point\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		- data-driven values for improper torsions\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		- including dihedral deviations from optimized geometries to better resolve torsion parameters\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		- broader coverage of parameters with extended training targets\
+
 Parameters with modifications:
 ```
         <!-- modification: CC b13a added guanadinium specific bond-->
