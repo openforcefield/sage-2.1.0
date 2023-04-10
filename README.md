@@ -66,14 +66,14 @@ Parameters with modifications:
      - Amidinium (added t18b)
      - Guanidinium (added b13a, t87a)
      
-     <img src="https://user-images.githubusercontent.com/16142894/231004432-ff59cd33-9b4a-44fa-888c-0f156504cd28.png" width=500>
+     <img src="https://user-images.githubusercontent.com/16142894/231004432-ff59cd33-9b4a-44fa-888c-0f156504cd28.png" width=300>
      
      - Carboxylate (added t18a, t19a, t31a, t42a, t48a)
-     <img src="https://user-images.githubusercontent.com/16142894/231004590-dbb74503-70c9-4820-a7c3-d08c2280545f.png" width=500>
+     <img src="https://user-images.githubusercontent.com/16142894/231004590-dbb74503-70c9-4820-a7c3-d08c2280545f.png" width=300>
      
      - Nitro (added t82a, t83a)
      
-     <img src="https://user-images.githubusercontent.com/16142894/231004529-1e1dabe1-ae23-4ad5-8e95-df3a98723c06.png" width=500>
+     <img src="https://user-images.githubusercontent.com/16142894/231004529-1e1dabe1-ae23-4ad5-8e95-df3a98723c06.png" width=300>
 
      - Phosphate (no change needed)
      - Sulfate (no change needed)
