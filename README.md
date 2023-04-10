@@ -2,18 +2,18 @@
 
 Updates to openff-2.0.0 which include improved chemical perception for sulfonamides and phosphates, extended training set coverage which now contains training data from Gen2 as well as Gen1 datasets, and improved fitting procedures with the use of a physically intuitive starting point from modified seminario and including dihedral deviations in optimized geometry targets, and optimizing impropers as well. Contributions for this release include changes from @pavankum, @trevorgokey, @chapincavender, @jthorton and valuable feedback from team @openforcefield. 
 
-Changes can be broadly classified as: 
-	- Chemical typing related
-		- sulfonamides
-		- phosphates
-		- bridgehead nitrogens
-		- bridgehead carbons
-		- groups with delocalized charges
-	- Fitting procedure related
-		- use of physically intuitive bonds and angles from modified-seminario as a starting point
-		- data-driven values for improper torsions
-		- including dihedral deviations from optimized geometries to better resolve torsion parameters
-		- broader coverage of parameters with extended training targets
+Changes can be broadly classified as: \
+	- Chemical typing related\
+		- sulfonamides \
+		- phosphates \
+		- bridgehead nitrogens \
+		- bridgehead carbons \
+		- groups with delocalized charges\
+	- Fitting procedure related\
+		- use of physically intuitive bonds and angles from modified-seminario as a starting point\
+		- data-driven values for improper torsions\
+		- including dihedral deviations from optimized geometries to better resolve torsion parameters\
+		- broader coverage of parameters with extended training targets\
 
 Parameters with modifications:
 ```
