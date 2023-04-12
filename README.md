@@ -1,6 +1,6 @@
 # Sage-2.1.0
 
-Updates to openff-2.0.0 which include improved chemical perception for sulfonamides and phosphates, extended training set coverage which now contains training data from Gen2 as well as Gen1 datasets, and improved fitting procedures with the use of a physically intuitive starting point from modified seminario and including dihedral deviations in optimized geometry targets, and optimizing impropers as well. Contributions for this release include changes from @pavankum, @trevorgokey, @chapincavender, @jthorton and valuable feedback from team @openforcefield. 
+Updates to openff-2.0.0 which include improved chemical perception for sulfonamides and phosphates, extended training set coverage which now contains training data from Gen2 as well as Gen1 datasets, and improved fitting procedures with the use of a physically intuitive starting point from modified seminario and including dihedral deviations in optimized geometry targets, and optimizing impropers as well. Contributions for this release include changes from @pavankum, @trevorgokey, @chapincavender, @jthorton, and valuable feedback from @davidlmobley, @hyejang, @lilyminium, @ChristopherBayly, @djcole56, and team @openforcefield. 
 
 Changes can be broadly classified as: 
  - Chemical typing related
@@ -49,7 +49,7 @@ Parameters with modifications:
 ```
 
 # Details of changes (still updating this section...)
- - A better starting point for the angles and bonds from the modified Seminario Method (https://doi.org/10.1021/acs.jctc.7b00785) as implemented in QUBEKit (https://github.com/qubekit/QUBEKit) (https://pubs.acs.org/doi/10.1021/acs.jcim.8b00767). Initial work by @jthorton and supporting analysis here, https://github.com/jthorton/MSM_QCArchive. This is helpful in avoiding manual corrections to parameters and brings the force constants of bonds and angles to physically intuitive domain. Since this is multi-dimensional optimization we get solutions on the pareto-optimal surface which resulted in some double bonds having lower force constants than single bonds. Modified seminario uses projection of Hessian data to evaluate the force constants and the mean of the force constants (and lengths) for the parameters was taken as the starting point for forcebalance optimization. Here is an example of bond parameter force constant changes from b34 to b40, which includes bonds between nitrogens (similar large changes can be observed in other bond and angle parameters):
+ - A better starting point for the angles and bonds from the modified Seminario Method (https://doi.org/10.1021/acs.jctc.7b00785) as implemented in QUBEKit (https://github.com/qubekit/QUBEKit) (https://pubs.acs.org/doi/10.1021/acs.jcim.8b00767). Initial work by **@jthorton** and **@djcole56**, and supporting analysis available here, https://github.com/jthorton/MSM_QCArchive. This is helpful in avoiding manual corrections to parameters and brings the force constants of bonds and angles to physically intuitive domain. Since this is multi-dimensional optimization we get solutions on the pareto-optimal surface which resulted in some double bonds having lower force constants than single bonds. Modified seminario uses projection of Hessian data to evaluate the force constants and the mean of the force constants (and lengths) for the parameters was taken as the starting point for forcebalance optimization. Here is an example of bond parameter force constant changes from b34 to b40, which includes bonds between nitrogens (similar large changes can be observed in other bond and angle parameters):
  
  |     Bond smarts     |      Sage 2.0.0     |      Sage 2.1.0     |
 |:-------------------:|:-------------------:|:-------------------:|
@@ -62,7 +62,7 @@ Parameters with modifications:
 | `"[#7+1:1]=[#7-1:2]"` |         766         |         2440        |
 |   `"[#7:1]#[#7:2]"`   |         760         |         3237        |
 
- - Included lot of new parameters for chemistries that involve delocalized charges from @chapincavender's work which would assign the same parameters for atom substructures that are in a delocalized configuration (https://github.com/chapincavender/protein-param-fit/blob/attenuation/test-delocalized-charge-assignments.py). Functional groups targeted were:
+ - Included lot of new parameters for chemistries that involve delocalized charges from **@chapincavender**'s work which would assign the same parameters for atom substructures that are in a delocalized configuration (https://github.com/chapincavender/protein-param-fit/blob/attenuation/test-delocalized-charge-assignments.py). Functional groups targeted were:
      - Amidinium (added t18b)
      - Guanidinium (added b13a, t87a)
      
@@ -77,7 +77,7 @@ Parameters with modifications:
 
      - Phosphate (no change needed)
      - Sulfate (no change needed)
- - Improved typing for sulfonamides and phosphates from @pavankum and @trevorgokey with changes in angle parameters and additional periodicities for certain torsion parameters. The changed parameters are b57a, change in a32 smirks definition to match `[*]-[S]=[*]` substructure, which has a mean near 100°, from a31, which has a mean near 120°.
+ - Improved typing for sulfonamides and phosphates from **@pavankum** and **@trevorgokey** with changes in angle parameters and additional periodicities for certain torsion parameters. The changed parameters are b57a, change in a32 smirks definition to match `[*]-[S]=[*]` substructure, which has a mean near 100°, from a31, which has a mean near 120°.
  
  ![image](https://user-images.githubusercontent.com/16142894/231005046-097894a6-ff2c-4da4-a1da-d390784d245b.png)
  
