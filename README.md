@@ -17,35 +17,35 @@ Changes can be broadly classified as:
 
 Parameters with modifications:
 ```
-        <!-- modification: CC b13a added guanadinium specific bond-->
-        <!-- modification: PB b43 changed from [#8X2:1]-[#8X2:2] to [#8X2:1]-[#8X2,#8X1-1:2] -->
-        <!-- modification: PB b53 changed from [#16X2:1]-[#7:2] to [#16X2,#16X1-1:1]-[#7:2] -->
-        <!-- modification: PB b57a child parameter to separate out double bondish/double bonds from b57  -->
-        <!-- modification: PB-TG a18 changed from [*:1]-[#7X4,#7X3,#7X2-1:2]-[*:3] to [*:1]~[#7X4,#7X3,#7X2-1:2]~[*:3] -->
-        <!-- modification: PB-TG a18a child parameter to separate out some ring matches from a18  -->
-        <!-- modification: PB-TG a22a child parameter to separate out some ring matches from a22  -->
-        <!-- modification: PB-TG a32 smirks definition changed to drain [*]-[S]=[*] matches from a31  -->
-        <!-- modification: CC added carboxylate torsions t18a to address delocalized charges -->
-        <!-- modification: CC added amidinium torsion t18b to address delocalized charges -->
-        <!-- modification: CC added carboxylate torsions t19a to address delocalized charges -->
-        <!-- modification: CC added carboxylate torsions t31a to address delocalized charges -->
-        <!-- modification: CC added carboxylate torsions t42a to address delocalized charges -->
-        <!-- modification: CC added carboxylate torsions t48a to address delocalized charges -->
-        <!-- modification: PB t51 changed from [*:1]-[#6X4:2]-[#7X3:3]-[*:4] to [*:1]~[#6X4:2]-[#7X3:3]~[*:4] -->
-        <!-- modification: CC added nitro torsion t82a to address delocalized charges -->
-        <!-- modification: CC added nitro torsion t83a to address delocalized charges -->
-        <!-- modification: CC added guanidinium torsion t87a to address delocalized charges -->
-        <!-- modification: PB-TG t123a added with a periodicity of 3 to better match that chemistry -->
-        <!-- modification: PB-TG t124, changed periodicity from 1 with phase_0, to periodicity of 2 with phase_0, and 3 with phase_0 -->
-        <!-- modification: PB t130 changed from [*:1]-[#7X4,#7X3:2]-[#7X4,#7X3:3]-[*:4] to [*:1]~[#7X4,#7X3:2]-[#7X4,#7X3:3]~[*:4] -->
-        <!-- modification: PB t138a as a child parameter to include [#7X2]-[#7X4] chemistry, other general force fields can parameterize this -->
-        <!-- modification: PB new parameter t141a for bridgehead Nitrogen chemistry based on t134 and tweaking the central Nitrogen to be 7x3 -->
-        <!-- modification: PB new parameter t141b for bridgehead Nitrogen chemistry based on t138 and tweaking the central Nitrogen to be 7x3 -->
-        <!-- modification: PB t141c, bridgehead carbons with a heteroatom neighbor has non-planar geometry, so a specific torsion term for that -->
-        <!-- modification: PB-TG t159, additional periodicities of 1 with phase_0, and 2 with phase_0 -->
-        <!-- modification: PB-TG t160, additional periodicity of 1 with phase_0 -->
-        <!-- modification: PB t161 changed from "[*:1]~[#7X3:2]-[#15:3]~[*:4]" to "[*:1]~[#7:2]-[#15:3]~[*:4]" to make it more general -->
-        <!-- modification: PB additional periodicities for t143 and t157 based on QM profiles for sulfonamides -->
+        -  b13a added guanadinium specific bond
+        -  b43 changed from [#8X2:1]-[#8X2:2] to [#8X2:1]-[#8X2,#8X1-1:2] 
+        -  b53 changed from [#16X2:1]-[#7:2] to [#16X2,#16X1-1:1]-[#7:2] 
+        -  b57a child parameter to separate out double bonds from b57  
+        -  a18 changed from [*:1]-[#7X4,#7X3,#7X2-1:2]-[*:3] to [*:1]~[#7X4,#7X3,#7X2-1:2]~[*:3] 
+        -  a18a child parameter to separate out some ring matches from a18  
+        -  a22a child parameter to separate out some ring matches from a22  
+        -  a32 smirks definition changed to drain [*]-[S]=[*] matches from a31  
+        -  added carboxylate torsions t18a to address delocalized charges 
+        -  added amidinium torsion t18b to address delocalized charges 
+        -  added carboxylate torsions t19a to address delocalized charges 
+        -  added carboxylate torsions t31a to address delocalized charges 
+        -  added carboxylate torsions t42a to address delocalized charges 
+        -  added carboxylate torsions t48a to address delocalized charges 
+        -  t51 changed from [*:1]-[#6X4:2]-[#7X3:3]-[*:4] to [*:1]~[#6X4:2]-[#7X3:3]~[*:4] 
+        -  added nitro torsion t82a to address delocalized charges 
+        -  added nitro torsion t83a to address delocalized charges 
+        -  added guanidinium torsion t87a to address delocalized charges 
+        -  t123a added with a periodicity of 3 to better match that chemistry 
+        -  t124, changed periodicity from 1 with phase_0, to periodicity of 2 with phase_0, and 3 with phase_0 
+        -  t130 changed from [*:1]-[#7X4,#7X3:2]-[#7X4,#7X3:3]-[*:4] to [*:1]~[#7X4,#7X3:2]-[#7X4,#7X3:3]~[*:4] 
+        -  t138a as a child parameter to include [#7X2]-[#7X4] chemistry, other general force fields can parameterize this 
+        -  new parameter t141a for bridgehead Nitrogen chemistry based on t134 and tweaking the central Nitrogen to be 7x3 
+        -  new parameter t141b for bridgehead Nitrogen chemistry based on t138 and tweaking the central Nitrogen to be 7x3 
+        -  t141c, bridgehead carbons with a heteroatom neighbor has non-planar geometry, so a specific torsion term for that 
+        -  t159, additional periodicities of 1 with phase_0, and 2 with phase_0 
+        -  t160, additional periodicity of 1 with phase_0 
+        -  t161 changed from "[*:1]~[#7X3:2]-[#15:3]~[*:4]" to "[*:1]~[#7:2]-[#15:3]~[*:4]" to make it more general 
+        -  additional periodicities for t143 and t157 based on QM profiles for sulfonamides 
 ```
 
 # Details of changes (still updating this section...)
@@ -80,6 +80,35 @@ Parameters with modifications:
  - Improved typing for sulfonamides and phosphates from @pavankum and @trevorgokey with changes in angle parameters and additional periodicities for certain torsion parameters. The changed parameters are b57a, change in a32 smirks definition to match `[*]-[S]=[*]` substructure, which has a mean near 100°, from a31, which has a mean near 120°.
  
  ![image](https://user-images.githubusercontent.com/16142894/231005046-097894a6-ff2c-4da4-a1da-d390784d245b.png)
+ 
+ ![image](https://user-images.githubusercontent.com/16142894/231583822-9346f220-4b03-4c34-b956-d21dec096718.png)
+
+ ![image](https://user-images.githubusercontent.com/16142894/231582917-a1ea8214-c9ac-4bf6-8acb-1e4f0abc940e.png)
+
+ ![image](https://user-images.githubusercontent.com/16142894/231583030-596d1564-77c3-48d0-8eb4-b665e45e286b.png)
+
+
+- Improper torsions were also adjusted in this version, and the changes in k values were:
+ 
+ | Improper torsions                                               | Sage 2.0.0    | Sage 2.1.0    |
+|-----------------------------------------------------------------|---------------|---------------|
+|                                                                 | k in kcal/mol | k in kcal/mol |
+| i1: `"[*:1]~[#6X3:2](~[*:3])~[*:4]"`                            | 1.10          | 5.23          |
+| i2: `"[*:1]~[#6X3:2](~[#8X1:3])~[#8:4]"`                        | 10.50         | 12.92         |
+| i3: `"[*:1]~[#7X3$(*~[#15,#16](!-[*])):2](~[*:3])~[*:4]"`       | 1.10          | 13.70         |
+| i4: `"[*:1]~[#7X3$(*~[#6X3]):2](~[*:3])~[*:4]"`                 | 1.00          | 1.26          |
+| i5: `"[*:1]~[#7X3$(*~[#7X2]):2](~[*:3])~[*:4]"`                 | 1.10          | -2.34         |
+| i6:` "[*:1]~[#7X3$(*@1-[*]=,:[*][*]=,:[*]@1):2](~[*:3])~[*:4]"` | 10.50         | 16.01         |
+| i7:` "[*:1]~[#6X3:2](=[#7X2,#7X3+1:3])~[#7:4]"`                 | 10.50         | 10.12         |
+
+ - Extended training sets:
+ Gen2 sets have been used in training force fields post Parsley 1.2.0, except for 1.3.0 where a specific subset of amide torsions were chosen from Gen1+Gen2. To augment data and improve coverage of parameters more training data is included on top of Gen2 sets which already were a valuable training source. 
+ 
+ |               | Opt-geo confs used in training | Torsion profiles used in training | Bonds covered | Angles covered | Proper torsions covered |
+|---------------|:-------:|:-------------:|:-------------:|:--------------:|:---------------:|
+| Parsley 1.2.0 |   4745  |      710      |     56/88     |      33/40     |      95/167     |
+| Sage 2.0.0    |   3663  |      713      |     56/88     |      33/40     |      95/167     |
+| Sage 2.1.0rc  |   5468  |      1254     |     82/90     |      41/42     |     171/181     |
 
  - Introduced new parameters for bridgehead nitrogens and bridgehead carbons where pyramidal geometry is observed in QM but the MM models it as planar.
  - Minor modifications to generalize parameters to include chemistries of interest (commonly encountered on PubChem and ChemBL) that don't have any parameters assigned and fail:
@@ -112,15 +141,4 @@ Parameters with modifications:
       
       <img src="https://user-images.githubusercontent.com/16142894/231010478-3d339032-875d-4946-9f8b-f7af1d847025.png" width=200>
 
- - Improper torsions were also adjusted in this version, and the changes in k values were
  
- | Improper torsions                                               | Sage 2.0.0    | Sage 2.1.0    |
-|-----------------------------------------------------------------|---------------|---------------|
-|                                                                 | k in kcal/mol | k in kcal/mol |
-| i1: `"[*:1]~[#6X3:2](~[*:3])~[*:4]"`                            | 1.10          | 5.23          |
-| i2: `"[*:1]~[#6X3:2](~[#8X1:3])~[#8:4]"`                        | 10.50         | 12.92         |
-| i3: `"[*:1]~[#7X3$(*~[#15,#16](!-[*])):2](~[*:3])~[*:4]"`       | 1.10          | 13.70         |
-| i4: `"[*:1]~[#7X3$(*~[#6X3]):2](~[*:3])~[*:4]"`                 | 1.00          | 1.26          |
-| i5: `"[*:1]~[#7X3$(*~[#7X2]):2](~[*:3])~[*:4]"`                 | 1.10          | -2.34         |
-| i6:` "[*:1]~[#7X3$(*@1-[*]=,:[*][*]=,:[*]@1):2](~[*:3])~[*:4]"` | 10.50         | 16.01         |
-| i7:` "[*:1]~[#6X3:2](=[#7X2,#7X3+1:3])~[#7:4]"`                 | 10.50         | 10.12         |
